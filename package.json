@@ -5,7 +5,7 @@
   "license": "ISC",
   "author": "",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "index.mjs",
   
   "scripts": {
     "start": "index.mjs",

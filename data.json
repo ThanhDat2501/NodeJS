@@ -1,0 +1,165 @@
+[
+  {
+    "endpoint": 310,
+    "input": {
+      "number1": 150,
+      "number2": 160
+    },
+    "output": {
+      "sum": 310
+    }
+  },
+  {
+    "endpoint": "/sum",
+    "input": {
+      "number1": 150,
+      "number2": 160
+    },
+    "output": {
+      "sumNumber": 310
+    }
+  },
+  {
+    "endpoint": "2025-05-16T10:19:57.329Z",
+    "input": {},
+    "output": {
+      "currentTime": "2025-05-16T10:19:57.329Z"
+    }
+  },
+  {
+    "endpoint": "/current-time",
+    "input": {},
+    "output": {
+      "currentTime": "2025-05-16T10:26:13.488Z"
+    }
+  },
+  {
+    "endpoint": "/sum",
+    "input": {
+      "number1": 150,
+      "number2": 160
+    },
+    "output": {
+      "sum": 310
+    }
+  },
+  {
+    "endpoint": "/count-sum",
+    "input": {},
+    "output": {
+      "totalCall": 1
+    }
+  },
+  {
+    "endpoint": "/sum",
+    "input": {
+      "number1": 150,
+      "number2": 160
+    },
+    "output": {
+      "sum": 310
+    }
+  },
+  {
+    "endpoint": "/sum",
+    "input": {
+      "number1": 150,
+      "number2": 160
+    },
+    "output": {
+      "sum": 310
+    }
+  },
+  {
+    "endpoint": "/sum",
+    "input": {
+      "number1": 150,
+      "number2": 160
+    },
+    "output": {
+      "sum": 310
+    }
+  },
+  {
+    "endpoint": "/count-sum",
+    "input": {},
+    "output": {
+      "totalCall": 4
+    }
+  },
+  {
+    "endpoint": "/sum",
+    "input": {
+      "number1": 150,
+      "number2": 160
+    },
+    "output": {
+      "sum": 310
+    }
+  },
+  {
+    "endpoint": "/sum",
+    "input": {
+      "number1": 150,
+      "number2": 150
+    },
+    "output": {
+      "sum": 300
+    }
+  },
+  {
+    "endpoint": "/sum",
+    "input": {},
+    "output": {
+      "error": "Invalid JSON"
+    }
+  },
+  {
+    "endpoint": "/sum",
+    "input": {
+      "number1": 150,
+      "number2": 150
+    },
+    "output": {
+      "sum": 300
+    }
+  },
+  {
+    "endpoint": "/sum",
+    "input": {},
+    "output": {
+      "error": "Invalid JSON"
+    }
+  },
+  {
+    "endpoint": "/sum",
+    "input": {
+      "number1": 150,
+      "number2": 160
+    },
+    "output": {
+      "sum": 310
+    }
+  },
+  {
+    "endpoint": "/current-time",
+    "input": {},
+    "output": {
+      "currentTime": "2025-05-16T10:44:59.695Z"
+    }
+  },
+  {
+    "endpoint": "/count-sum",
+    "input": {},
+    "output": {
+      "totalCall": 4
+    }
+  },
+  {
+    "endpoint": "/current-time",
+    "input": {},
+    "output": {
+      "currentTime": "2025-06-02T09:58:13.056Z"
+    }
+  }
+]

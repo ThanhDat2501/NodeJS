@@ -102,5 +102,128 @@
     "output": {
       "totalCall": 14
     }
+  },
+  {
+    "endpoint": "/sum",
+    "input": {
+      "number1": 150,
+      "number2": 30
+    },
+    "output": {
+      "sum": 180
+    }
+  },
+  {
+    "endpoint": "/count-sum",
+    "input": {},
+    "output": {
+      "totalCall": 16
+    }
+  },
+  {
+    "endpoint": "/count-sum",
+    "input": {},
+    "output": {
+      "totalCall": 17
+    }
+  },
+  {
+    "endpoint": "/count-sum",
+    "input": {},
+    "output": {
+      "totalCall": 18
+    }
+  },
+  {
+    "endpoint": "/count-sum",
+    "input": {},
+    "output": {
+      "totalCall": 19
+    }
+  },
+  {
+    "endpoint": "/sum",
+    "input": {
+      "number1": 150,
+      "number2": 30
+    },
+    "output": {
+      "sum": 180
+    }
+  },
+  {
+    "endpoint": "/current-time",
+    "input": {},
+    "output": {
+      "currentTime": "2025-07-06T17:14:29.682Z"
+    }
+  },
+  {
+    "endpoint": "/sum",
+    "input": {},
+    "output": {
+      "error": "Invalid JSON"
+    }
+  },
+  {
+    "endpoint": "/sum",
+    "input": {
+      "number1": 150,
+      "number2": 3
+    },
+    "output": {
+      "sum": 153
+    }
+  },
+  {
+    "endpoint": "/count-sum",
+    "input": {},
+    "output": {
+      "totalCall": 23
+    }
+  },
+  {
+    "endpoint": "/sum",
+    "input": {
+      "number1": 150,
+      "number2": 3
+    },
+    "output": {
+      "sum": 153
+    }
+  },
+  {
+    "endpoint": "/sum",
+    "input": {
+      "number1": 150,
+      "number2": 3
+    },
+    "output": {
+      "sum": 153
+    }
+  },
+  {
+    "endpoint": "/sum",
+    "input": {},
+    "output": {
+      "error": "Invalid JSON"
+    }
+  },
+  {
+    "endpoint": "/sum",
+    "input": {
+      "number1": 150,
+      "number2": 40
+    },
+    "output": {
+      "sum": 190
+    }
+  },
+  {
+    "endpoint": "/count-sum",
+    "input": {},
+    "output": {
+      "totalCall": 29
+    }
   }
 ]

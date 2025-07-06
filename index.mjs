@@ -1,42 +1,28 @@
 import { createServer } from 'node:http';
 import { createRequire } from "module";
+import { https, endpoint, https_status, header, data_file, type, link, input_status } from './modules/constants.mjs';
 const require = createRequire(import.meta.url);
 const fs = require('fs');
-const hostname = '127.0.0.1';
-const port = 3000;
-const done = 200;
-const notfound = 404;
-const serverError = 500;
-const badRequest = 400;
-const errorInput = "Invalid input";
-const errorJSON = "Invalid JSON";
-const post = 'POST';
-const get = 'GET';
-const sumUrl = '/sum';
-const countSumUrl = '/count-sum';
-const currentTimeUrl = '/current-time';
-const historyUrl = '/history';
-const DATA_FILE = 'data.json';
 let items = [];
 let countSum = 0;
 try {
-    if (fs.existsSync(DATA_FILE)) {
-        const data = fs.readFileSync(DATA_FILE, 'utf-8');
+    if (fs.existsSync(data_file)) {
+        const data = fs.readFileSync(data_file, 'utf-8');
         items = JSON.parse(data);
+        countSum+= items.length
     }
 } catch (err) {
     console.error('Failed to load data:', err);
     items = [];
 }
-// Utility to save data to file
 function saveData() {
-    fs.writeFile(DATA_FILE, JSON.stringify(items, null, 2), (err) => {
+    fs.writeFile(data_file, JSON.stringify(items, null, 2), (err) => {
         if (err) console.error('Error saving data:', err);
     });
 }
 const server = createServer((request, response) => {
-    response.setHeader('Content-Type', 'application/json');
-    if (request.method === post && request.url === sumUrl) {
+    response.setHeader(header.CONTENT_TYPE, type.JSON);
+    if (request.method === https.POST && request.url === endpoint.sumUrl) {
         let body = '';
         request.on('data', chunk => {
             body += chunk;
@@ -47,71 +33,74 @@ const server = createServer((request, response) => {
                 const number1 = data.number1;
                 const number2 = data.number2;
                 if (typeof number1 !== 'number' || typeof number2 !== 'number') {
-                    response.statusCode = badRequest;
-                    const result = { error: errorInput };
+                    response.statusCode = https_status.badRequest;
+                    const result = { error: input_status.errorInput };
                     countSum++;
                     items.push({
-                        endpoint: sumUrl,
+                        endpoint: endpoint.sumUrl,
                         input: { number1, number2 },
                         output: result
                     });
                     response.end(JSON.stringify(result));
+                    saveData()
                     return;
                 }
                 countSum++;
                 const sum = number1 + number2;
                 const result = { sum };
                 items.push({
-                    endpoint: sumUrl,
+                    endpoint: endpoint.sumUrl,
                     input: { number1, number2 },
                     output: result
                 });
                 saveData()
-                response.statusCode = done;
+                response.statusCode = https_status.oke;
                 response.end(JSON.stringify(result));
             } catch (error) {
-                const result = { error: errorJSON };
-                response.statusCode = serverError;
+                const result = { error: input_status.errorJSON };
+                response.statusCode = https_status.serverError;
                 countSum++;
                 items.push({
-                        endpoint: sumUrl,
-                        input: {},
-                        output: result
-                    });
+                    endpoint: endpoint.sumUrl,
+                    input: {},
+                    output: result
+                });
                 saveData()
                 response.end(JSON.stringify(result));
             }
         });
-    } else if (request.method === get && request.url === countSumUrl) {
+    } else if (request.method === https.GET && request.url === endpoint.countSumUrl) {
+        countSum++;
         const result = { totalCall: countSum };
-        response.statusCode = done;
+        response.statusCode = https_status.oke;
         items.push({
-            endpoint: countSumUrl,
+            endpoint: endpoint.countSumUrl,
             input: {},
             output: result
         });
         saveData();
         response.end(JSON.stringify(result));
-    } else if (request.method === get && request.url === currentTimeUrl) {
+    } else if (request.method === https.GET && request.url === endpoint.currentTimeUrl) {
         const currentTime = new Date().toISOString();
         const result = { currentTime };
-        response.statusCode = done;
+        response.statusCode = https_status.oke;
         items.push({
-            endpoint: currentTimeUrl,
+            endpoint: endpoint.currentTimeUrl,
             input: {},
             output: result
         });
         saveData()
         response.end(JSON.stringify(result));
-    } else if (request.method === get && request.url === historyUrl) {
-        response.statusCode = done;
+    } else if (request.method === https.GET && request.url === endpoint.historyUrl) {
+        response.statusCode = https_status.oke;
         const result = { items };
         response.end(JSON.stringify(result));
     } else {
-        response.statusCode = notfound;
-        response.end(JSON.stringify({ error: notfound }));
+        response.statusCode = https_status.notfound;
+        response.end(JSON.stringify({ error: https_status.notfound }));
     }
 });
-server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
+server.listen(link.port, link.hostname, () => {
+    console.log(`Server running at http://${link.hostname}:${link.port}/`);
 });
+

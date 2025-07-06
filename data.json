@@ -1,165 +1,106 @@
 [
   {
-    "endpoint": 310,
-    "input": {
-      "number1": 150,
-      "number2": 160
-    },
-    "output": {
-      "sum": 310
-    }
-  },
-  {
-    "endpoint": "/sum",
-    "input": {
-      "number1": 150,
-      "number2": 160
-    },
-    "output": {
-      "sumNumber": 310
-    }
-  },
-  {
-    "endpoint": "2025-05-16T10:19:57.329Z",
+    "endpoint": "/current-time",
     "input": {},
     "output": {
-      "currentTime": "2025-05-16T10:19:57.329Z"
+      "currentTime": "2025-07-06T13:21:27.423Z"
     }
   },
   {
     "endpoint": "/current-time",
     "input": {},
     "output": {
-      "currentTime": "2025-05-16T10:26:13.488Z"
+      "currentTime": "2025-07-06T13:21:28.737Z"
     }
   },
   {
     "endpoint": "/sum",
     "input": {
       "number1": 150,
-      "number2": 160
+      "number2": 30
     },
     "output": {
-      "sum": 310
+      "sum": 180
     }
   },
   {
     "endpoint": "/count-sum",
     "input": {},
     "output": {
-      "totalCall": 1
-    }
-  },
-  {
-    "endpoint": "/sum",
-    "input": {
-      "number1": 150,
-      "number2": 160
-    },
-    "output": {
-      "sum": 310
-    }
-  },
-  {
-    "endpoint": "/sum",
-    "input": {
-      "number1": 150,
-      "number2": 160
-    },
-    "output": {
-      "sum": 310
-    }
-  },
-  {
-    "endpoint": "/sum",
-    "input": {
-      "number1": 150,
-      "number2": 160
-    },
-    "output": {
-      "sum": 310
+      "totalCall": 3
     }
   },
   {
     "endpoint": "/count-sum",
     "input": {},
     "output": {
-      "totalCall": 4
-    }
-  },
-  {
-    "endpoint": "/sum",
-    "input": {
-      "number1": 150,
-      "number2": 160
-    },
-    "output": {
-      "sum": 310
-    }
-  },
-  {
-    "endpoint": "/sum",
-    "input": {
-      "number1": 150,
-      "number2": 150
-    },
-    "output": {
-      "sum": 300
-    }
-  },
-  {
-    "endpoint": "/sum",
-    "input": {},
-    "output": {
-      "error": "Invalid JSON"
-    }
-  },
-  {
-    "endpoint": "/sum",
-    "input": {
-      "number1": 150,
-      "number2": 150
-    },
-    "output": {
-      "sum": 300
-    }
-  },
-  {
-    "endpoint": "/sum",
-    "input": {},
-    "output": {
-      "error": "Invalid JSON"
-    }
-  },
-  {
-    "endpoint": "/sum",
-    "input": {
-      "number1": 150,
-      "number2": 160
-    },
-    "output": {
-      "sum": 310
-    }
-  },
-  {
-    "endpoint": "/current-time",
-    "input": {},
-    "output": {
-      "currentTime": "2025-05-16T10:44:59.695Z"
+      "totalCall": 3
     }
   },
   {
     "endpoint": "/count-sum",
     "input": {},
     "output": {
-      "totalCall": 4
+      "totalCall": 3
     }
   },
   {
-    "endpoint": "/current-time",
+    "endpoint": "/count-sum",
     "input": {},
     "output": {
-      "currentTime": "2025-06-02T09:58:13.056Z"
+      "totalCall": 7
+    }
+  },
+  {
+    "endpoint": "/count-sum",
+    "input": {},
+    "output": {
+      "totalCall": 8
+    }
+  },
+  {
+    "endpoint": "/count-sum",
+    "input": {},
+    "output": {
+      "totalCall": 9
+    }
+  },
+  {
+    "endpoint": "/count-sum",
+    "input": {},
+    "output": {
+      "totalCall": 10
+    }
+  },
+  {
+    "endpoint": "/count-sum",
+    "input": {},
+    "output": {
+      "totalCall": 11
+    }
+  },
+  {
+    "endpoint": "/count-sum",
+    "input": {},
+    "output": {
+      "totalCall": 12
+    }
+  },
+  {
+    "endpoint": "/sum",
+    "input": {
+      "number1": 150,
+      "number2": 30
+    },
+    "output": {
+      "sum": 180
+    }
+  },
+  {
+    "endpoint": "/count-sum",
+    "input": {},
+    "output": {
+      "totalCall": 14
     }
   }
 ]
